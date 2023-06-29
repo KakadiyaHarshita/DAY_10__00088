@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>the window object</h1>
+    <h2>java script window</h2>
+    <p id="BOM"></p>
+    <script>
+        document.getElementById("bom").innerHTML = 
+        "Browser inner window width:  " + window.innerWidth +"px<br>"
+        "Browser inner window height: " + window.innerHeight +"px;" 
+    
+    </script>
+    <h2>the open () and clode() methods</h2>
+
+    <button onclick="openwin()">Open "mywindow"</button>
+    <button onclick="closewin()">Close "mywindow"</button>
+
+    <button onclick="resizewin()">Resize window</button>
+
+    <script>
+        let mywindow;
+        function openwin() {
+            mywindow = window.open("https://silveroakuni.ac.in/","blank","width=200,height=300");
+        }
+        function closewin() {
+            myWindow.close();
+        }
+        function resizewin(){
+            mywindow.resizeTo(300,900);
+
+        }
+    </script>
+</body>
+</html>
