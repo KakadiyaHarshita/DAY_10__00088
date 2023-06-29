@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <style>
+            .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+        </style>
+        <script type="text/javascript">
+            function promptUser() {
+                let userInput = prompt("Hi, What's your name?", "Harshita");
+                if(userInput != null) {
+                    document.getElementById("result").innerHTML = "Hello " + userInput + ", good day!";
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function magicBox() {
+                let userInput = prompt("Enter your choice");
+                switch(userInput) {
+                    case 'A':
+                        document.getElementById("result").innerHTML = "You won 1 ltr Milk";
+                        break;
+                    case 'B':
+                        document.getElementById("result").innerHTML = "You won a packet of chips";
+                        break;
+                    case 'C':
+                        document.getElementById("result").innerHTML = "You won a car";
+                        break;
+                    default:
+                        document.getElementById("result").innerHTML = "Invalid option";
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <button onclick="promptUser()">Click on me!</button>
+        <p id="result"></p>
+        
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  alert("Hello World!");
+});
+</script>
+<p>This method will append 1 at the end of each key pressed in the text field </p>
+Enter your Text: <input type="text" id="Number">
+<script>
+document.getElementById("Number").onkeyup = function() {myMethod()};
+function myMethod() {
+var number = document.getElementById("Number");
+number.value = number.value+1;
+}
+</script>
+<h1></h1>
+<h2>The onclick Event</h2>
+
+<p>Click on the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button id="myBtn" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<script>
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("myBtn").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+<br>
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+</br>
+<p>Enter A, B or C to select a magic box:</p>
+        <button onclick="magicBox()">Click on me!</button>
+        <p id="result"></p>
+
+    </body>
+</html> 
